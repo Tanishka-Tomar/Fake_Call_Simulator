@@ -22,7 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ onLoadPreset, onResetAll }) => {
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
             <h1 className="text-xl font-black text-white tracking-tight leading-none">
-              CallFrame
+              False Call
             </h1>
             <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-indigo-300">
               SIMULATION ENGINE

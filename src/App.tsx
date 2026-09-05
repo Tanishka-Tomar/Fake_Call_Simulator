@@ -15,7 +15,7 @@ import { audioEngine } from './utils/audioEngine';
 import { formatTimeMMSS } from './utils/formatters';
 import { PhoneCall, Sparkles, ShieldCheck } from 'lucide-react';
 
-const LOCAL_STORAGE_KEY = 'callframe_config_v2';
+const LOCAL_STORAGE_KEY = 'false_call_config_v1';
 
 export function App() {
   // 1. Configuration State
@@ -265,7 +265,7 @@ export function App() {
             <div className="flex flex-col text-[11px] text-slate-400 leading-relaxed">
               <span className="font-semibold text-slate-300">Safety & Transparency Guarantee</span>
               <span>
-                CallFrame functions strictly as an in-browser visual phone call simulator. It does NOT make real phone calls, spoof caller ID, or access telephony networks. All simulations display a subtle <strong>"SIMULATION"</strong> tag.
+                False Call functions strictly as an in-browser visual phone call simulator. It does NOT make real phone calls, spoof caller ID, or access telephony networks. All simulations display a subtle <strong>"SIMULATION"</strong> tag.
               </span>
             </div>
           </div>
