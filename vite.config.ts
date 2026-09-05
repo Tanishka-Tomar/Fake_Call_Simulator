@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Fake_Call_Simulator/',
+  base: '/False_Call/',
   plugins: [
     react(),
     tailwindcss(),
