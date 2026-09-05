@@ -11,7 +11,7 @@ interface DurationSelectorProps {
 
 export const DurationSelector: React.FC<DurationSelectorProps> = ({ config, onChange }) => {
   return (
-    <div className="flex flex-col gap-4 glass-card p-5 rounded-2xl border border-slate-800">
+    <div className="flex flex-col gap-5 glass-card p-5 sm:p-6 rounded-2xl border border-slate-800">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-400 flex items-center gap-2">
           <Clock className="w-4 h-4" />

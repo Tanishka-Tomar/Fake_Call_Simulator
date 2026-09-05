@@ -25,7 +25,7 @@ export const RingtoneSelector: React.FC<RingtoneSelectorProps> = ({ config, onCh
   };
 
   return (
-    <div className="flex flex-col gap-4 glass-card p-5 rounded-2xl border border-slate-800">
+    <div className="flex flex-col gap-5 glass-card p-5 sm:p-6 rounded-2xl border border-slate-800">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-400 flex items-center gap-2">
           <Volume2 className="w-4 h-4" />
@@ -36,7 +36,7 @@ export const RingtoneSelector: React.FC<RingtoneSelectorProps> = ({ config, onCh
         </span>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
         {RINGTONE_OPTIONS.map((rt) => {
           const isSelected = config.ringtone === rt.id;
           const isRecommended = recommendedForStyle === rt.id;

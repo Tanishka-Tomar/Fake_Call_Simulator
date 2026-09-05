@@ -9,7 +9,7 @@ interface DisplaySettingsProps {
 
 export const DisplaySettings: React.FC<DisplaySettingsProps> = ({ config, onChange }) => {
   return (
-    <div className="flex flex-col gap-4 glass-card p-5 rounded-2xl border border-slate-800">
+    <div className="flex flex-col gap-5 glass-card p-5 sm:p-6 rounded-2xl border border-slate-800">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-400 flex items-center gap-2">
           <Smartphone className="w-4 h-4" />
@@ -17,7 +17,7 @@ export const DisplaySettings: React.FC<DisplaySettingsProps> = ({ config, onChan
         </h3>
       </div>
 
-      <div className="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800">
+      <div className="flex flex-col sm:flex-row sm:items-center items-start justify-between gap-4 p-4 rounded-xl bg-slate-900 border border-slate-800">
         <div className="flex items-center gap-2">
           <Clock className="w-4 h-4 text-indigo-400" />
           <div className="flex flex-col">

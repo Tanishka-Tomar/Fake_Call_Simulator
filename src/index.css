@@ -40,6 +40,78 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Setup layout: shared rhythm that keeps the many controls easy to scan. */
+.configuration-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.configuration-section__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 0.25rem;
+}
+
+.configuration-section__heading h3 {
+  color: #f8fafc;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.configuration-section__heading > p {
+  max-width: 17rem;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.configuration-section__eyebrow {
+  margin-bottom: 0.35rem;
+  color: #818cf8;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.configuration-section__content > .glass-card {
+  height: 100%;
+}
+
+.start-simulation-bar {
+  padding: 0.75rem;
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  border-radius: 1.5rem;
+  background: rgba(2, 6, 23, 0.82);
+  box-shadow: 0 -10px 30px rgba(2, 6, 23, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+@media (max-width: 640px) {
+  .configuration-section {
+    gap: 1rem;
+  }
+
+  .configuration-section__heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .configuration-section__heading > p {
+    max-width: none;
+    text-align: left;
+  }
+}
+
 /* Pulse ringing animation for buttons */
 @keyframes ring-pulse {
   0% {

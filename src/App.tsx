@@ -215,11 +215,11 @@ export function App() {
       <Header onLoadPreset={handleLoadPreset} onResetAll={handleResetAll} />
 
       {/* Main Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto p-4 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10 grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-10 items-start">
         
         {/* Left Column: CONFIGURATION SETUP (Col 7) */}
-        <div className="lg:col-span-7 flex flex-col gap-6">
-          <div className="flex items-center justify-between">
+        <div className="lg:col-span-7 flex flex-col gap-10">
+          <div className="setup-intro flex items-center justify-between">
             <div className="flex flex-col">
               <h2 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
                 <span>Simulator Setup & Configuration</span>
@@ -230,17 +230,52 @@ export function App() {
             </div>
           </div>
 
-          {/* Form Sections */}
-          <CallerForm config={config} onChange={handleUpdateConfig} errors={errors} />
-          <CallerPhotoUploader config={config} onChange={handleUpdateConfig} />
-          <DurationSelector config={config} onChange={handleUpdateConfig} />
-          <PhoneStyleSelector config={config} onChange={handleUpdateConfig} />
-          <RingtoneSelector config={config} onChange={handleUpdateConfig} />
-          <BackgroundSelector config={config} onChange={handleUpdateConfig} />
-          <DisplaySettings config={config} onChange={handleUpdateConfig} />
+          {/* Form sections */}
+          <section className="configuration-section" aria-labelledby="caller-settings-heading">
+            <div className="configuration-section__heading">
+              <div>
+                <p className="configuration-section__eyebrow">01 · Identity</p>
+                <h3 id="caller-settings-heading">Who&apos;s calling?</h3>
+              </div>
+              <p>Set the caller details and photo shown on screen.</p>
+            </div>
+            <div className="configuration-section__content grid grid-cols-1 xl:grid-cols-2 gap-5">
+              <CallerForm config={config} onChange={handleUpdateConfig} errors={errors} />
+              <CallerPhotoUploader config={config} onChange={handleUpdateConfig} />
+            </div>
+          </section>
+
+          <section className="configuration-section" aria-labelledby="call-settings-heading">
+            <div className="configuration-section__heading">
+              <div>
+                <p className="configuration-section__eyebrow">02 · Call experience</p>
+                <h3 id="call-settings-heading">Make it feel right</h3>
+              </div>
+              <p>Choose the timing, phone interface, and ringtone.</p>
+            </div>
+            <div className="configuration-section__content flex flex-col gap-5">
+              <DurationSelector config={config} onChange={handleUpdateConfig} />
+              <PhoneStyleSelector config={config} onChange={handleUpdateConfig} />
+              <RingtoneSelector config={config} onChange={handleUpdateConfig} />
+            </div>
+          </section>
+
+          <section className="configuration-section" aria-labelledby="visual-settings-heading">
+            <div className="configuration-section__heading">
+              <div>
+                <p className="configuration-section__eyebrow">03 · Visual finish</p>
+                <h3 id="visual-settings-heading">Set the scene</h3>
+              </div>
+              <p>Fine-tune the background and on-screen display.</p>
+            </div>
+            <div className="configuration-section__content flex flex-col gap-5">
+              <BackgroundSelector config={config} onChange={handleUpdateConfig} />
+              <DisplaySettings config={config} onChange={handleUpdateConfig} />
+            </div>
+          </section>
 
           {/* Large Start Simulation Button */}
-          <div className="pt-4 sticky bottom-4 z-30">
+          <div className="start-simulation-bar pt-1 sticky bottom-3 sm:bottom-4 z-30">
             <button
               onClick={handleStartFullscreenSimulation}
               className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600 hover:from-emerald-500 hover:via-teal-500 hover:to-indigo-500 text-white font-extrabold text-base shadow-2xl shadow-emerald-600/30 border border-white/20 flex items-center justify-center gap-3 transition-all transform active:scale-98 cursor-pointer"
@@ -253,14 +288,14 @@ export function App() {
         </div>
 
         {/* Right Column: INTERACTIVE PREVIEW & FULLSCREEN LAUNCH (Col 5) */}
-        <div className="lg:col-span-5 sticky top-24 flex flex-col gap-4">
+        <div className="lg:col-span-5 lg:sticky lg:top-24 flex flex-col gap-5">
           <LivePhonePreview
             config={config}
             onLaunchFullScreen={handleStartFullscreenSimulation}
           />
 
           {/* Safety Footnote */}
-          <div className="p-4 rounded-2xl bg-slate-900/60 border border-slate-800 flex items-start gap-3">
+          <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/60 border border-slate-800 flex items-start gap-3">
             <ShieldCheck className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
             <div className="flex flex-col text-[11px] text-slate-400 leading-relaxed">
               <span className="font-semibold text-slate-300">Safety & Transparency Guarantee</span>

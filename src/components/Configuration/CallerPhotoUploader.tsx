@@ -39,7 +39,7 @@ export const CallerPhotoUploader: React.FC<CallerPhotoUploaderProps> = ({ config
   };
 
   return (
-    <div className="flex flex-col gap-4 glass-card p-5 rounded-2xl border border-slate-800">
+    <div className="flex flex-col gap-5 glass-card p-5 sm:p-6 rounded-2xl border border-slate-800">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-400 flex items-center gap-2">
           <Camera className="w-4 h-4" />
@@ -48,7 +48,7 @@ export const CallerPhotoUploader: React.FC<CallerPhotoUploaderProps> = ({ config
         <span className="text-[10px] text-slate-400">Optional</span>
       </div>
 
-      <div className="flex items-center gap-5">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
         {/* Circle Avatar / Photo Container */}
         <div className="relative w-20 h-20 rounded-full border-2 border-indigo-500/40 overflow-hidden shadow-lg bg-slate-900 flex items-center justify-center shrink-0">
           {config.callerPhoto ? (

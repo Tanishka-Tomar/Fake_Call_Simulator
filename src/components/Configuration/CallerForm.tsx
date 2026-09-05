@@ -10,7 +10,7 @@ interface CallerFormProps {
 
 export const CallerForm: React.FC<CallerFormProps> = ({ config, onChange, errors }) => {
   return (
-    <div className="flex flex-col gap-5 glass-card p-5 rounded-2xl border border-slate-800">
+    <div className="flex flex-col gap-5 glass-card p-5 sm:p-6 rounded-2xl border border-slate-800">
       <h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-400 flex items-center gap-2">
         <User className="w-4 h-4" />
         <span>Caller Information</span>

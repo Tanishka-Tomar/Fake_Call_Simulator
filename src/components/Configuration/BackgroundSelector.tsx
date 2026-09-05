@@ -36,7 +36,7 @@ export const BackgroundSelector: React.FC<BackgroundSelectorProps> = ({ config, 
   };
 
   return (
-    <div className="flex flex-col gap-5 glass-card p-5 rounded-2xl border border-slate-800">
+    <div className="flex flex-col gap-6 glass-card p-5 sm:p-6 rounded-2xl border border-slate-800">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold uppercase tracking-wider text-indigo-400 flex items-center gap-2">
           <Palette className="w-4 h-4" />
@@ -45,7 +45,7 @@ export const BackgroundSelector: React.FC<BackgroundSelectorProps> = ({ config, 
       </div>
 
       {/* Preset Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5">
         {BG_PRESETS.map((preset) => {
           const isSelected = config.backgroundType === preset.id;
           return (
